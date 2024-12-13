@@ -1,32 +1,62 @@
 # Overview
 This project is a Streamlit application that allows users to upload an image of a business card and extract relevant information from it using the easyOCR library. The extracted information includes the company name, cardholder name, designation, mobile number, email address, website URL, area, city, state, and pin code. Users can also save the extracted information along with the uploaded business card image into a database.
 
-# Usage
+# How It Works
 
-* The application will open in your default web browser. Follow the on-screen instructions to upload a business card image and extract its information.
+Business Card Upload:
+
+The card is uploaded and saved to a predefined location on the system.
+OCR is applied to read text from the image.
+
+Extracted text is processed to identify relevant fields (e.g., email, phone number, company name
 
 
-* You can view the extracted information in the graphical user interface. Click the "Save to Database" button to store the information along with the uploaded image in the database.
+Image Processing:
 
+Detected text is highlighted on the uploaded image using OpenCV.
+Displays a preview of the processed image in the app.
 
-* To read, update, or delete data, navigate to the respective sections in the Streamlit UI.
+Data Upload:
 
+Data extracted from the card is stored in a MySQL database with the associated card image in binary format.
+
+Data Management:
+
+Users can view, edit, or delete card details via the "Update and Delete" section.
+Screenshots
+
+1. Home Page: Displays a sample business card and lists the technologies used.
+   
+2. Upload and Extract: Users can upload a card and view extracted data.
+  
+3. Data Management: Allows users to modify or delete existing card information.
+
+ 
 # Technologies Used
 
-Python
 
-Streamlit
+Frontend: Streamlit
 
-easyOCR
+Backend: EasyOCR, OpenCV, Python
 
-SQLite (or MySQL)
+Database: MySQL
+
+Libraries: Pandas, Matplotlib, PIL
+
+
+# Future Enhancements
+
+
+Add support for additional languages in OCR.
+
+Enhance data extraction logic for better accuracy.
+
+Implement advanced search and filter options for stored business cards.
+
+Allow multiple card uploads in one session.
 
   
-# Future Improvements
-Implement user authentication and authorization for enhanced security.
-Optimize OCR accuracy and performance.
-Add support for additional languages and business card formats.
-Enhance the GUI with more interactive features and visualizations.
+
 
 
 
